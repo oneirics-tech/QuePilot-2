@@ -1,0 +1,404 @@
+/* Additional app-specific styles */
+
+/* Layout */
+.admin-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-main {
+  flex: 1;
+  padding: var(--space-xl);
+  background-color: var(--bg-primary);
+}
+
+/* Dashboard */
+.admin-dashboard {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-xl);
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-600);
+  margin-top: var(--space-sm);
+}
+
+/* Queue View */
+.queue-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+
+.queue-column h3 {
+  margin-bottom: var(--space-md);
+  color: var(--text-secondary);
+}
+
+.customer-card {
+  margin-bottom: var(--space-md);
+}
+
+.customer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+}
+
+.customer-details {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.customer-actions {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+/* Employee Management */
+.employee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+
+.employee-card {
+  position: relative;
+}
+
+.employee-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.employee-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+/* Workflow Editor */
+.workflow-steps {
+  margin-bottom: var(--space-lg);
+}
+
+.workflow-step {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background-color: var(--bg-primary);
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-sm);
+  cursor: move;
+}
+
+.workflow-step.dragging {
+  opacity: 0.5;
+}
+
+.step-order {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-100);
+  color: var(--primary-700);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+}
+
+.step-name {
+  flex: 1;
+  font-weight: 500;
+}
+
+/* Employee Portal */
+.employee-portal {
+  min-height: 100vh;
+  padding: var(--space-xl);
+  background-color: var(--bg-secondary);
+}
+
+.check-in-out-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-primary);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.customer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--space-lg);
+}
+
+/* Workflow Progress */
+.workflow-progress {
+  margin: var(--space-md) 0;
+}
+
+.workflow-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.workflow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.workflow-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: var(--gray-300);
+}
+
+.workflow-step.completed:not(:last-child)::after {
+  background-color: var(--success);
+}
+
+.step-indicator {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray-300);
+  color: var(--text-secondary);
+  font-weight: 600;
+  z-index: 1;
+}
+
+.workflow-step.current .step-indicator {
+  background-color: var(--primary-600);
+  color: white;
+}
+
+.workflow-step.completed .step-indicator {
+  background-color: var(--success);
+  color: white;
+}
+
+.workflow-actions {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+}
+
+/* Customer Kiosk */
+.kiosk-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-secondary);
+}
+
+.check-in-container {
+  width: 100%;
+  max-width: 500px;
+  padding: var(--space-lg);
+}
+
+.business-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.business-logo {
+  max-height: 80px;
+  margin-bottom: var(--space-md);
+}
+
+/* Confirmation Screen */
+.confirmation-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-secondary);
+}
+
+.confirmation-card {
+  text-align: center;
+  max-width: 500px;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--space-lg);
+  background-color: var(--success);
+  color: white;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.queue-number {
+  margin: var(--space-xl) 0;
+}
+
+.queue-number span {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.queue-number .number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color, var(--primary-600));
+}
+
+/* Login Page */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-secondary);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card h1 {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+/* PIN Login */
+.pin-login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-secondary);
+}
+
+.pin-login-card {
+  text-align: center;
+  max-width: 500px;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--gray-300);
+  border-top-color: var(--primary-600);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.loading-spinner.fullscreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .queue-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .display-content {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-steps {
+    flex-direction: column;
+  }
+
+  .workflow-step:not(:last-child)::after {
+    display: none;
+  }
+}
+
+/* Header */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md) var(--space-xl);
+  background-color: var(--primary-600);
+  color: white;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+/* Error Message */
+.error-message {
+  color: var(--danger);
+  font-size: 0.875rem;
+  margin: var(--space-sm) 0;
+}
+
+/* No Content States */
+.no-customers {
+  text-align: center;
+  padding: var(--space-2xl);
+}
+
+.no-serving {
+  color: var(--text-secondary);
+  font-style: italic;
+}
