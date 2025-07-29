@@ -1,0 +1,33 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vite/React
+dist/
+.vite/
+coverage/
+*.local
+
+# Environment Files
+.env
+.env.*
+
+# Logs
+logs
+*.log
+
+# macOS system files
+.DS_Store
+
+# Database
+*.sqlite
+*.db
+
+# Sequelize CLI
+sequelize-data/
+
+# Docker
+*.pid
+docker-compose.override.yml
